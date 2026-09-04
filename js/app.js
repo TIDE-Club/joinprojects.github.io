@@ -83,6 +83,7 @@
   }
 
   function applyLink(project) {
+    if (project?.applyUrl) return project.applyUrl;
     return project && project.id === 'yuhong-agent-main' ? APPLY_LINK_YUHONG : APPLY_LINK_DEFAULT;
   }
 

@@ -9,6 +9,7 @@
     projects: [
       {
         id: "gsi-cable-estimation",
+        applyUrl: "https://tideclub26.feishu.cn/share/base/form/shrcn3ykmx639lEzb7PcmoL6fWg",
         name: "AI驱动的船舶电缆物量智能预估项目",
         description: "本项目由TIDE学生社团发起，联合广船国际共同开展，旨在利用AI技术学习历史三维模型数据，构建覆盖照明、动力、推进、导航等核心系统的智能预测模型，实现船舶设计初期电缆长度的精准化、自动化预估。项目支持校园远程参与，也可申请本学期线下进入广船国际实习。",
         period: "长期开展（具体起止时间待定）",
@@ -56,6 +57,7 @@
       },
       {
         id: "cosco-destination-eta",
+        applyUrl: "https://tideclub26.feishu.cn/share/base/form/shrcn3ykmx639lEzb7PcmoL6fWg",
         name: "中远海科全球班轮目的港与ETA动态预测研发项目",
         description: "本项目由TIDE学生社团发起，联合中远海运科技股份有限公司共同开展，聚焦全球班轮船舶的目的港识别与ETA动态预测。项目将利用大规模历史AIS轨迹、船舶抵离港记录、历史航线及港口空间信息，构建可持续更新并识别异常航行状态的智能预测体系。",
         period: "长期开展（具体起止时间待定）",
@@ -109,6 +111,7 @@
       },
       {
         id: "enterprise-inventory-optimization",
+        applyUrl: "https://tideclub26.feishu.cn/share/base/form/shrcn3ykmx639lEzb7PcmoL6fWg",
         name: "库存优化算法实习生项目",
         description: "本项目由香港中文大学独立研发，面向大型国企库存大数据场景，依托成熟的库存优化核心算法开展需求预测、采购量测算与库存策略优化。现阶段重点进行系统适配、全流程测试和存量业务代码迭代，覆盖算法验证、系统调试与代码优化全链路。",
         period: "连续实习2个月及以上，每周到岗4天以上",
@@ -142,6 +145,7 @@
       },
       {
         id: "ai-business-education-product",
+        applyUrl: "https://tideclub26.feishu.cn/share/base/form/shrcn3ykmx639lEzb7PcmoL6fWg",
         name: "AI Research & Product Intern：AI × 商学院教育系统",
         description: "共同开发面向留学教育场景的新一代AI产品。岗位强调理解真实教学场景中的问题，并利用AI完成需求发现、产品设计、Vibe Coding、PoC、用户测试与产品迭代，而非单纯按照需求编写代码。",
         period: "长期合作，设有2个月试用期",
@@ -200,6 +204,7 @@
       },
       {
         id: "ai-overseas-market-product",
+        applyUrl: "https://tideclub26.feishu.cn/share/base/form/shrcn3ykmx639lEzb7PcmoL6fWg",
         name: "AI Research & Product Intern：AI × 海外市场商业模型",
         description: "共同探索日本、中国及其他海外市场中的新型AI商业模式与产品机会。岗位强调从模糊商业问题中识别真实需求和付费价值，并利用AI完成市场发现、需求判断、产品设计、Vibe Coding、PoC、用户验证与商业模式迭代。",
         period: "长期合作，设有2个月试用期",
