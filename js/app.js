@@ -68,7 +68,9 @@
   }
 
   function getAllProjects() {
-    return (DATA.domains || []).flatMap(domain => (domain.projects || []).map(project => ({ ...project, domain })));
+    return (DATA.domains || []).flatMap(domain => (domain.projects || [])
+      .filter(project => !project.hidden)
+      .map(project => ({ ...project, domain })));
   }
 
   function findProject(projectId) {

@@ -111,6 +111,7 @@
       },
       {
         id: "enterprise-inventory-optimization",
+        hidden: true,
         applyUrl: "https://tideclub26.feishu.cn/share/base/form/shrcn3ykmx639lEzb7PcmoL6fWg",
         name: "库存优化算法实习生项目",
         description: "本项目由香港中文大学独立研发，面向大型国企库存大数据场景，依托成熟的库存优化核心算法开展需求预测、采购量测算与库存策略优化。现阶段重点进行系统适配、全流程测试和存量业务代码迭代，覆盖算法验证、系统调试与代码优化全链路。",
@@ -145,6 +146,7 @@
       },
       {
         id: "ai-business-education-product",
+        hidden: true,
         applyUrl: "https://tideclub26.feishu.cn/share/base/form/shrcn3ykmx639lEzb7PcmoL6fWg",
         name: "AI Research & Product Intern：AI × 商学院教育系统",
         description: "共同开发面向留学教育场景的新一代AI产品。岗位强调理解真实教学场景中的问题，并利用AI完成需求发现、产品设计、Vibe Coding、PoC、用户测试与产品迭代，而非单纯按照需求编写代码。",
@@ -204,6 +206,7 @@
       },
       {
         id: "ai-overseas-market-product",
+        hidden: true,
         applyUrl: "https://tideclub26.feishu.cn/share/base/form/shrcn3ykmx639lEzb7PcmoL6fWg",
         name: "AI Research & Product Intern：AI × 海外市场商业模型",
         description: "共同探索日本、中国及其他海外市场中的新型AI商业模式与产品机会。岗位强调从模糊商业问题中识别真实需求和付费价值，并利用AI完成市场发现、需求判断、产品设计、Vibe Coding、PoC、用户验证与商业模式迭代。",
