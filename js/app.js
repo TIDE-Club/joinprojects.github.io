@@ -71,7 +71,14 @@
     return (DATA.domains || []).flatMap(domain => (domain.projects || [])
       .filter(project => !project.hidden)
       .map(project => ({ ...project, domain })))
-      .sort((a, b) => Number(b.progress === '招募中') - Number(a.progress === '招募中'));
+      .sort((a, b) => {
+        const recruitmentOrder = Number(b.progress === '招募中') - Number(a.progress === '招募中');
+        if (recruitmentOrder) return recruitmentOrder;
+        if (a.progress === '招募中' && b.progress === '招募中') {
+          return Number(a.id === 'yuhong-agent-main') - Number(b.id === 'yuhong-agent-main');
+        }
+        return 0;
+      });
   }
 
   function findProject(projectId) {
