@@ -70,7 +70,8 @@
   function getAllProjects() {
     return (DATA.domains || []).flatMap(domain => (domain.projects || [])
       .filter(project => !project.hidden)
-      .map(project => ({ ...project, domain })));
+      .map(project => ({ ...project, domain })))
+      .sort((a, b) => Number(b.progress === '招募中') - Number(a.progress === '招募中'));
   }
 
   function findProject(projectId) {
