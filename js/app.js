@@ -72,7 +72,8 @@
       .filter(project => !project.hidden)
       .map(project => ({ ...project, domain })))
       .sort((a, b) => {
-        const recruitmentOrder = Number(b.progress === '招募中') - Number(a.progress === '招募中');
+        const recruitmentRank = progress => progress === '招募中' ? 2 : progress === '即将开放招募' ? 1 : 0;
+        const recruitmentOrder = recruitmentRank(b.progress) - recruitmentRank(a.progress);
         if (recruitmentOrder) return recruitmentOrder;
         if (a.progress === '招募中' && b.progress === '招募中') {
           return Number(a.id === 'yuhong-agent-main') - Number(b.id === 'yuhong-agent-main');
@@ -97,9 +98,16 @@
     return project && project.id === 'yuhong-agent-main' ? APPLY_LINK_YUHONG : APPLY_LINK_DEFAULT;
   }
 
+  function applicationButton(project) {
+    if (project?.applicationDisabled) {
+      return '<span class="btn btn-disabled" aria-disabled="true">点击报名</span>';
+    }
+    return btn(applyLink(project), '点击报名', 'primary');
+  }
+
   function statusBadge(progress) {
     const text = progress || '进行中';
-    const cls = /招募中|开放|进行/.test(text) ? 'success' : /截止|结束/.test(text) ? 'warning' : 'primary';
+    const cls = text === '即将开放招募' ? 'primary' : /招募中|开放|进行/.test(text) ? 'success' : /截止|结束/.test(text) ? 'warning' : 'primary';
     return `<span class="badge ${cls}">${esc(text)}</span>`;
   }
 
@@ -248,7 +256,7 @@
               <h1 style="font-size:clamp(30px,4vw,52px);">${esc(project.name)}</h1>
               <p class="lead" style="margin-top:16px;">${esc(project.description)}</p>
             </div>
-            <div class="pill-row" style="flex-shrink:0;">${btn(applyLink(project), '点击报名', 'primary')}${externalLinks}</div>
+            <div class="pill-row" style="flex-shrink:0;">${applicationButton(project)}${externalLinks}</div>
           </div>
           <div class="detail-meta-grid">
             ${metaBox('项目周期', project.period)}
