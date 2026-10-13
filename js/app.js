@@ -201,6 +201,10 @@
   function renderRecruitment(project) {
     const r = project.recruitment;
     if (!r) return '';
+    const heading = r.heading || (project.progress === '即将开放招募' ? '招募信息' : '开放招募岗位');
+    const intro = r.intro || (project.progress === '即将开放招募'
+      ? '招募尚未开放，以下信息可帮助你提前了解参与方向与能力要求。'
+      : '加入真实项目，积累产学研实战经验。');
     const groups = [
       ['技能要求', r.skillRequirements],
       ['时间投入', r.timeRequirements],
@@ -208,7 +212,7 @@
       ['预期收获', r.expectedGains]
     ];
     return `<section class="section-tight"><div class="container">
-      <div class="section-header"><h2>开放招募岗位</h2><p class="lead">加入真实项目，积累产学研实战经验。</p></div>
+      <div class="section-header"><h2>${esc(heading)}</h2><p class="lead">${esc(intro)}</p></div>
       <div class="grid grid-3" style="margin-bottom:20px;">
         ${metaBox('招募人数', r.count)}
         ${metaBox('招聘岗位', r.position)}
@@ -221,6 +225,23 @@
       </div>
       ${project.priorityConditions && project.priorityConditions.length ? `<div class="card card-pad" style="margin-top:20px;"><h3>优先条件</h3><div style="margin-top:14px;">${list(project.priorityConditions)}</div></div>` : ''}
     </div></section>`;
+  }
+
+  function renderDetailSections(project) {
+    if (!project.detailSections || !project.detailSections.length) return '';
+    return project.detailSections.map(section => {
+      const columns = section.columns === 3 ? 'grid-3' : 'grid-2';
+      const groups = section.groups || [];
+      return `<section class="section-tight"><div class="container">
+        <div class="section-header"><h2>${esc(section.title)}</h2>${section.description ? `<p class="lead">${esc(section.description)}</p>` : ''}</div>
+        <div class="grid ${columns}">${groups.map((group, index) => `<article class="card card-pad">
+          <span class="badge primary">${esc(group.label || String(index + 1).padStart(2, '0'))}</span>
+          <h3 style="margin-top:12px;">${esc(group.title)}</h3>
+          ${group.description ? `<p class="muted small" style="margin-top:10px;">${esc(group.description)}</p>` : ''}
+          ${group.items && group.items.length ? `<div style="margin-top:14px;">${list(group.items)}</div>` : ''}
+        </article>`).join('')}</div>
+      </div></section>`;
+    }).join('');
   }
 
   function renderSpecialSections(project) {
@@ -271,6 +292,7 @@
         </article>
       </div></section>
       ${renderObjectives(project.coreObjectives)}
+      ${renderDetailSections(project)}
       ${renderRecruitment(project)}
       ${renderSpecialSections(project)}
       ${renderSubProjects(project)}
