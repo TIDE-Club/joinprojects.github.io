@@ -4,7 +4,7 @@
 
   data.domains.push({
     id: "upcoming-opportunities",
-    name: "开放招募项目",
+    name: "2026 秋季项目 二期",
     description: "当前开放招募的企业岗位与跨学科学习实践项目。",
     projects: [
       {
