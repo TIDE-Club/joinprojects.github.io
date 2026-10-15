@@ -4,8 +4,8 @@
 
   data.domains.push({
     id: "upcoming-opportunities",
-    name: "即将开放项目",
-    description: "即将开放的企业岗位与跨学科学习实践项目。",
+    name: "开放招募项目",
+    description: "当前开放招募的企业岗位与跨学科学习实践项目。",
     projects: [
       {
         id: "hymson-ai-campus-recruitment",
@@ -14,9 +14,9 @@
         period: "2027届校园招聘",
         members: "招聘人数以企业岗位安排为准",
         partner: "海目星激光科技集团股份有限公司",
-        progress: "即将开放招募",
-        applicationDisabled: true,
-        achievements: "正式开放后按企业招聘流程申请",
+        progress: "招募中",
+        applyUrl: "https://tideclub26.feishu.cn/share/base/form/shrcnscrR3eMEXoYo7g370ZXNZe",
+        achievements: "按企业招聘流程申请",
         techIndicators: "岗位方向包括大模型应用、智能助手、Agent、RAG、企业级AI看板及工业Coding Agent等，工作地点为深圳。",
         expectedOutcome: "进入真实工业AI业务场景，积累企业级AI应用研发或AI产品全流程实践经验，并参与智能制造领域AI能力的产品化与交付。",
         coreObjectives: [
@@ -79,9 +79,9 @@
         period: "首轮学习与探索暂定8周",
         members: "6-12人",
         partner: "TIDE Club",
-        progress: "即将开放招募",
-        applicationDisabled: true,
-        achievements: "正式开放后由项目发起团队统一组织",
+        progress: "招募中",
+        applyUrl: "https://tideclub26.feishu.cn/share/base/form/shrcnscrR3eMEXoYo7g370ZXNZe",
+        achievements: "由项目发起团队统一组织",
         techIndicators: "项目采用每周小组交流、自主学习、专题协作与阶段展示的形式，学习阶段预计每周投入3-5小时。",
         expectedOutcome: "应用研究报告、数据分析或实验记录、小型工具、Demo原型及阶段展示材料；表现良好的方向可继续发展为深入研究或真实企业项目。",
         coreObjectives: [

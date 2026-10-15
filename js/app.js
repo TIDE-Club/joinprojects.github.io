@@ -98,11 +98,12 @@
     return project && project.id === 'yuhong-agent-main' ? APPLY_LINK_YUHONG : APPLY_LINK_DEFAULT;
   }
 
-  function applicationButton(project) {
-    if (project?.applicationDisabled) {
-      return '<span class="btn btn-disabled" aria-disabled="true">点击报名</span>';
+  function applicationButton(project, label = '点击报名') {
+    const recruitmentClosed = /截止|结束/.test(project?.progress || '');
+    if (project?.applicationDisabled || recruitmentClosed) {
+      return `<span class="btn btn-disabled" aria-disabled="true">${esc(label)}</span>`;
     }
-    return btn(applyLink(project), '点击报名', 'primary');
+    return btn(applyLink(project), label, 'primary');
   }
 
   function statusBadge(progress) {
@@ -303,6 +304,12 @@
     const sub = findSubProject(projectId, subId);
     if (!sub) return renderNotFound('专项未找到', '该专项可能已被移除或不存在。');
     const parent = sub.parent;
+    const subApplication = {
+      ...sub,
+      progress: sub.progress || parent.progress,
+      applicationDisabled: sub.applicationDisabled ?? parent.applicationDisabled,
+      applyUrl: sub.applyUrl || parent.applyUrl || applyLink(parent)
+    };
     return `<div class="fade-in">
       <section class="section-tight"><div class="container">
         <div class="breadcrumb"><a href="#/">首页</a><span>/</span><a href="#/projects">项目列表</a><span>/</span><a href="#/projects/${esc(parent.id)}">${esc(parent.name)}</a><span>/</span><span>${esc(sub.name)}</span></div>
@@ -313,7 +320,7 @@
               <h1 style="font-size:clamp(30px,4vw,50px);">${esc(sub.name)}</h1>
               <p class="lead" style="margin-top:16px;">${esc(sub.description)}</p>
             </div>
-            <div class="pill-row" style="flex-shrink:0;">${btn(APPLY_LINK_DEFAULT, '报名申请', 'primary')}</div>
+            <div class="pill-row" style="flex-shrink:0;">${applicationButton(subApplication, '报名申请')}</div>
           </div>
           <div class="detail-meta-grid">
             ${metaBox('项目周期', sub.period)}
