@@ -13,7 +13,7 @@
       period: "2026 秋季",
       members: "招募人数待定",
       partner: "北规院智慧交通课题组",
-      progress: "招募中",
+      progress: "招募结束，运营中",
       applyUrl: "https://tideclub26.feishu.cn/share/base/form/shrcnscrR3eMEXoYo7g370ZXNZe",
       achievements: "按项目需求与能力匹配择优录取",
       techIndicators: "构建空间自适应邻域的贝叶斯动态网络模型，完成Pólya-Gamma数据增强与PG-FFBS后验推断代码闭环，并以RMSE等指标对比基线预测模型。",
