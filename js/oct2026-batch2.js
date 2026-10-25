@@ -113,7 +113,7 @@
       period: "2026 秋季",
       members: "招募人数待定",
       partner: "TIDE Club",
-      progress: "招募中",
+      progress: "招募结束，运营中",
       applyUrl: "https://tideclub26.feishu.cn/share/base/form/shrcnscrR3eMEXoYo7g370ZXNZe",
       achievements: "按申请材料与项目匹配度择优录取",
       techIndicators: "研究DSSC、Eclipse Dataspace Components、FIWARE、Tractus-X与Simpl-Open等工具生态，实践数据连接器、数据目录、身份信任、访问策略、互操作和治理机制。",
