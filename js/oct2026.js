@@ -79,7 +79,7 @@
         period: "首轮学习与探索暂定8周",
         members: "6-12人",
         partner: "TIDE Club",
-        progress: "招募中",
+        progress: "招募结束，运营中",
         applyUrl: "https://tideclub26.feishu.cn/share/base/form/shrcnscrR3eMEXoYo7g370ZXNZe",
         achievements: "由项目发起团队统一组织",
         techIndicators: "项目采用每周小组交流、自主学习、专题协作与阶段展示的形式，学习阶段预计每周投入3-5小时。",
